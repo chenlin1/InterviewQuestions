@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>前端面试题：CSS盒子模型</title>
+</head>
+
+<body>
+    <h4>
+        ES6常用语法
+        一、let和const
+        1.定义变量使用let替代var
+        2.Const定义不可修改的变量
+        3.作用域和{}
+        let const
+        {
+        let name = ‘imooc’;
+        }
+        console.log(name);
+
+        const name = ‘imooc’;
+        name = ‘won’;
+        console.log(name);
+
+        二、字符串
+        // str(es5)
+        name = ‘immoc’;
+        course = ‘React开发App’；
+        console.log(‘hello’ + name +’, coure is’ + course);
+        console.log(`hello ${name}, course is ${course}`);
+
+        三、函数扩展
+        1.参数默认值
+        2.箭头函数
+        3.展开运算符
+
+        const hello = (name=‘imooc’) => {
+        console.log(`hello ${name}!`);
+        }
+        hello();
+
+        const double = x =>x+2
+        console.log(double)
+
+
+        function hello(name1, name2) {
+        console.log(name1, name2);
+        }
+        let arr = [‘imooc’, ‘woniu’];
+        hello.apply(null, arr) // es5
+        hello(…arr);
+
+        四、对象扩展
+        1.Object.keys、values、entries
+        2.对象方法简写，计算属性
+        3.展开运算符（不是ES6标准，但是babel也支持）
+
+        const obj = {name: ‘imooc’, course: ‘React开发APP’}
+        console.log(Object.keys(obj))
+        console.log(Object.values(obj))
+        console.log(Object.entries(obj))
+
+        const name = ‘imooc’;
+        const obj = {
+        name,
+        [name]: ‘hello’,
+        hello: function(){},
+        hello(){}
+        };
+        obj[name] = ‘hello imooc’;
+        console.log(obj);
+
+
+        const obj = {name: ‘imooc’, course: ‘React开发APP’};
+        const obj1 = {type: ‘IT’, name: ‘woniu’};
+        console.log({…obj,…obj1,data:’2019’})
+
+
+        五、解构赋值
+        1.数组解构
+        2.对象解构
+
+        const arr = [‘hello’,’imooc’];
+        // let arg1 = arr[0];
+        // let arg2 = arr[1];
+        let [arg1, arg2] = arr;
+        console.log(arg1, ‘|’,arg2);
+
+
+        const obj = {name: ‘imooc’, course:’React’};
+        const {name, course} = obj;
+        console.log(name, ‘|’, course);
+
+
+        六、类
+        1.是prototype的语法糖
+        2.Extends继承
+        3.Constructor构造函数
+
+        Class MyApp{
+        constructor() {
+        this.name = ‘imooc’;
+        }
+        sayHello () {
+        console.log(`hello ${this.name} !`);
+        }
+        }
+        const app = new MyApp();
+        app.sayHello();
+
+
+        七、新的数据结构
+        1.Set，元素不可重合
+        2.Map
+        3.Symbol
+
+
+        八、模块化
+        1.Import,import{}
+        2.Export、Export default
+        3.Node现在还不支持，还需要用require来加载文件
+
+        九、其他特性
+        1.Promise
+        2.迭代器和生成器
+        3.代理Proxy
+    </h4>
+</body>
+
+</html>
